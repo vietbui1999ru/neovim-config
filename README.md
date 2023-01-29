@@ -7,3 +7,4 @@ Plugins that I added:
 - [x] Markdown preview and toggle for easier documentations.
 - [x] Colorizer to visualize HEX, RGB, etc easier.
 - [ ] Headline highlighting and other nifty colors for markdown and orgmode. (not working right now)
+- [ ] Can I commit changes in one zsh command?

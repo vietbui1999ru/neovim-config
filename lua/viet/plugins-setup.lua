@@ -106,12 +106,12 @@ return packer.startup(function(use)
 	-- git signs plugin
 	use("lewis6991/gitsigns.nvim")
 
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = function()
-			vim.fn["mkdp#util#install"]()
-		end,
-	})
+	--	use({
+	--		"iamcco/markdown-preview.nvim",
+	--		run = function()
+	--			vim.fn["mkdp#util#install"]()
+	--		end,
+	--	})
 
 	use({
 		"iamcco/markdown-preview.nvim",
@@ -120,6 +120,10 @@ return packer.startup(function(use)
 			vim.g.mkdp_filetypes = { "markdown" }
 		end,
 		ft = { "markdown" },
+	})
+
+	use({
+		"akinsho/org-bullets.nvim",
 	})
 
 	if packer_boostrap then

@@ -17,3 +17,5 @@ require("viet.plugins.gitsigns")
 require("viet.plugins.orgmode")
 require("viet.plugins.markdown-preview")
 require("viet.plugins.org-bullets")
+--require("viet.plugins.headlines") not working correctly
+require("viet.plugins.nvim-colorizer")

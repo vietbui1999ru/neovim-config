@@ -122,8 +122,18 @@ return packer.startup(function(use)
 		ft = { "markdown" },
 	})
 
+	-- orgmode bullets beautify
 	use({
 		"akinsho/org-bullets.nvim",
+	})
+
+	-- orgmode headlines highlighter, still not working
+	use({
+		"lukas-reineke/headlines.nvim",
+	})
+
+	use({
+		"norcalli/nvim-colorizer.lua",
 	})
 
 	if packer_boostrap then

@@ -136,6 +136,12 @@ return packer.startup(function(use)
 		"norcalli/nvim-colorizer.lua",
 	})
 
+	-- run code right when you finish your command
+	use({ "michaelb/sniprun", run = "bash ./install.sh" })
+
+	-- make creating tables in nvim fasterj
+	use({ "dhruvasagar/vim-table-mode" })
+
 	if packer_boostrap then
 		require("packer").sync()
 	end

@@ -229,6 +229,11 @@ _G.packer_plugins = {
     path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  sniprun = {
+    loaded = true,
+    path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/sniprun",
+    url = "https://github.com/michaelb/sniprun"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
@@ -258,6 +263,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
+  },
+  ["vim-table-mode"] = {
+    loaded = true,
+    path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/vim-table-mode",
+    url = "https://github.com/dhruvasagar/vim-table-mode"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,

@@ -41,3 +41,11 @@ kmap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- show help tags
 kmap.set("n", "<C-s>", ":MarkdownPreview<CR>")
 kmap.set("n", "<M-s>", ":MarkdownPreviewStop<CR>")
 kmap.set("n", "<C-p>", ":MarkdownPreviewToggle<CR>")
+
+-- sniprun
+--kmap.set("v", "f", "<Plug>SnipRun", { silent = true }) -- do not run
+--kmap.set("n", "<leader>so", "<Plug>SnipRunOperator", { silent = true }) -- do not run
+--kmap.set("n", "<leader>sr", "<Plug>SnipRun", { silent = true }) -- do not run
+
+-- vim table mode
+kmap.set("n", "<leader>tm", ":TableModeToggle") -- toggle table mode

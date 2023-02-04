@@ -43,9 +43,15 @@ kmap.set("n", "<M-s>", ":MarkdownPreviewStop<CR>")
 kmap.set("n", "<C-p>", ":MarkdownPreviewToggle<CR>")
 
 -- sniprun
---kmap.set("v", "f", "<Plug>SnipRun", { silent = true }) -- do not run
---kmap.set("n", "<leader>so", "<Plug>SnipRunOperator", { silent = true }) -- do not run
+--kmap.set("v", "p", "<Plug>SnipRun", { silent = true }) -- do not run
+--kmap.set("n", "<leader>sp", "<Plug>SnipRunOperator", { silent = true }) -- do not run
 --kmap.set("n", "<leader>sr", "<Plug>SnipRun", { silent = true }) -- do not run
 
+-- Colorizer toggle
+kmap.set("n", "<leader>ct", ":ColorizerToggle<CR>")
+
 -- vim table mode
-kmap.set("n", "<leader>tm", ":TableModeToggle") -- toggle table mode
+kmap.set("n", "<leader>tm", ":TableModeToggle<CR>") -- toggle table mode
+
+-- zen-mode toggle
+kmap.set("n", "<leader>zm", ":ZenMode<CR>")

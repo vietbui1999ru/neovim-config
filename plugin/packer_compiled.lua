@@ -213,6 +213,11 @@ _G.packer_plugins = {
     path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/org-bullets.nvim",
     url = "https://github.com/akinsho/org-bullets.nvim"
   },
+  ["orgWiki.nvim"] = {
+    loaded = true,
+    path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/orgWiki.nvim",
+    url = "https://github.com/ranjithshegde/orgWiki.nvim"
+  },
   orgmode = {
     config = { "\27LJ\2\nD\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\21setup_ts_grammar\forgmode\frequire\0" },
     loaded = true,
@@ -273,6 +278,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 

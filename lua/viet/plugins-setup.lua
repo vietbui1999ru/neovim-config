@@ -142,6 +142,11 @@ return packer.startup(function(use)
 	-- make creating tables in nvim fasterj
 	use({ "dhruvasagar/vim-table-mode" })
 
+	-- easy hyperlink, journaling, and wiki features
+	use({ "ranjithshegde/orgWiki.nvim" })
+
+  use({"folke/zen-mode.nvim"})
+
 	if packer_boostrap then
 		require("packer").sync()
 	end

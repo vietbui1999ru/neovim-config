@@ -36,7 +36,6 @@ return packer.startup(function(use)
 
 	use("szw/vim-maximizer") -- max and restore current win
 
-	--
 	use("tpope/vim-surround")
 	--
 	use("vim-scripts/ReplaceWithRegister")
@@ -44,7 +43,13 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim")
 
 	-- file explorer
-	use("nvim-tree/nvim-tree.lua")
+	use({
+		"nvim-tree/nvim-tree.lua",
+		run = function()
+			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+			ts_update()
+		end,
+	})
 
 	-- icons
 	use("kyazdani42/nvim-web-devicons")
@@ -99,6 +104,29 @@ return packer.startup(function(use)
 		end,
 	})
 
+	use({ "nvim-neorg/neorg-telescope" })
+	-- neorg, a better orgmode experience. So they say...
+	use({
+		"nvim-neorg/neorg",
+		--		config = function()
+		--			require("neorg").setup({
+		--				load = {
+		--					["core.defaults"] = {}, -- Loads default behaviour
+		--					["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
+		--					["core.norg.dirman"] = { -- Manages Neorg workspaces
+		--						config = {
+		--							workspaces = {
+		--								notes = "~/Desktop/Spring-2023/neorg-notes/",
+		--							},
+		--						},
+		--					},
+		--				},
+		--			})
+		--		end,
+		--		run = ":Neorg sync-parsers",
+		--		requires = "nvim-lua/plenary.nvim",
+	})
+
 	-- auto closing
 	use("windwp/nvim-autopairs")
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" })
@@ -145,7 +173,11 @@ return packer.startup(function(use)
 	-- easy hyperlink, journaling, and wiki features
 	use({ "ranjithshegde/orgWiki.nvim" })
 
-  use({"folke/zen-mode.nvim"})
+	-- zen-mode
+	use({ "folke/zen-mode.nvim" })
+
+	-- primeagen's vim game
+	use({ "ThePrimeagen/vim-be-good" })
 
 	if packer_boostrap then
 		require("packer").sync()

@@ -41,6 +41,7 @@ cmp.setup({
 		{ name = "buffer" }, -- text within current buffer
 		{ name = "path" }, -- file system paths
 		{ name = "orgmode" }, -- orgmode
+		{ name = "neorg" },
 	}),
 
 	formatting = {

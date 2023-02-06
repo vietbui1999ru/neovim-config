@@ -2,8 +2,9 @@ This is my basic nvim config and plugins based on [Josean Martinez's tutorial](h
 
 Plugins that I added:
 
-- [x] Zen-mode for increased focus and productivity
-- [x] Neorg file support
+- [x] Zen-mode for increased focus and productivity.
+- [x] Neorg file support.
+  - [x] support nvim-cmp, telescope, and zen-mode.
 - [x] Orgmode files with support for treesitter, lsp, auto-completion, and linting.
   - [x] Org-bullets for beautifying bullet points.
 - [x] Markdown preview and toggle for easier documentations.

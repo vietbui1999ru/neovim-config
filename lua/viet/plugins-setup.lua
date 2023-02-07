@@ -179,6 +179,21 @@ return packer.startup(function(use)
 	-- primeagen's vim game
 	use({ "ThePrimeagen/vim-be-good" })
 
+	-- wakatime coding time monitor
+	use({ "wakatime/vim-wakatime" })
+
+	-- show hints for keybindings
+	use({ "folke/which-key.nvim" })
+
+	-- pomodoro
+	use({ "dbinagi/nomodoro" })
+
+	-- anki cards for neovim
+	use({ "rareitems/anki.nvim" })
+
+	-- ASCII Diagrams
+	use({ "jbyuki/venn.nvim" })
+
 	if packer_boostrap then
 		require("packer").sync()
 	end

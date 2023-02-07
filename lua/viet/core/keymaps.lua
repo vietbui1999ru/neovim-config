@@ -55,3 +55,19 @@ kmap.set("n", "<leader>tm", ":TableModeToggle<CR>") -- toggle table mode
 
 -- zen-mode toggle
 kmap.set("n", "<leader>zm", ":ZenMode<CR>")
+
+-- lsync web turn on
+-- kmap.set("n", "<leader>wb", )
+
+-- nomodoro keymaps
+local pomo = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+pomo("n", "<leader>nw", "<cmd>NomoWork<cr>", opts)
+pomo("n", "<leader>nb", "<cmd>NomoBreak<cr>", opts)
+pomo("n", "<leader>ns", "<cmd>NomoStop<cr>", opts)
+
+-- Anki fast
+kmap.set("n", "<leader>ab", ":Anki Basic<Enter>")
+kmap.set("n", "<leader>au", ":AnkiUnlock<Enter>")
+kmap.set("n", "<leader>as", ":AnkiSend<Enter>")
+kmap.set("n", "<leader>ai", ":AnkiSendGui<Enter>")

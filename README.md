@@ -2,6 +2,7 @@ This is my basic nvim config and plugins based on [Josean Martinez's tutorial](h
 
 Plugins that I added:
 
+- [x] ASCII drawing.
 - [x] Anki Flashcards straight from neovim.
 - [x] Zen-mode for increased focus and productivity.
 - [x] Nomodoro for pomodoro features

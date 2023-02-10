@@ -194,6 +194,12 @@ return packer.startup(function(use)
 	-- ASCII Diagrams
 	use({ "jbyuki/venn.nvim" })
 
+	-- image viewer straight in terminal and nvim
+	use({ "edluffy/hologram.nvim" })
+
+	use({ "nvim-lua/popup.nvim" })
+	use({ "nvim-telescope/telescope-media-files.nvim" })
+
 	if packer_boostrap then
 		require("packer").sync()
 	end

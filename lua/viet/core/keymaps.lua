@@ -2,8 +2,10 @@
 vim.g.mapleader = " "
 
 local kmap = vim.keymap
+local opts = { noremap = true, silent = true }
 
-kmap.set("i", "jk", "<ESC>")
+-- exit from insert mode and save current file
+kmap.set("i", "jk", "<ESC>:w<Enter>", opts)
 
 kmap.set("n", "<leader>nh", ":nohl<CR>")
 
@@ -61,7 +63,6 @@ kmap.set("n", "<leader>zm", ":ZenMode<CR>")
 
 -- nomodoro keymaps
 local pomo = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
 pomo("n", "<leader>nw", "<cmd>NomoWork<cr>", opts)
 pomo("n", "<leader>nb", "<cmd>NomoBreak<cr>", opts)
 pomo("n", "<leader>ns", "<cmd>NomoStop<cr>", opts)

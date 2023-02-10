@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/headlines.nvim",
     url = "https://github.com/lukas-reineke/headlines.nvim"
   },
+  ["hologram.nvim"] = {
+    loaded = true,
+    path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/hologram.nvim",
+    url = "https://github.com/edluffy/hologram.nvim"
+  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
@@ -254,6 +259,11 @@ _G.packer_plugins = {
     path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
+  },
   sniprun = {
     loaded = true,
     path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/sniprun",
@@ -263,6 +273,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
+  ["telescope-media-files.nvim"] = {
+    loaded = true,
+    path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
+    url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

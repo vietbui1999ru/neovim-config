@@ -10,17 +10,17 @@ anki.setup({
 	models = {
 		-- Here you specify which notetype should be associated with which deck
 		-- Notetype = "Deck Path",
-		["Basic"] = "Rust",
+		["Basic"] = "Vim::org",
 	},
 	-- contexts still not working
-	--contexts = {
-	--	nvim = {
-	--		tags = "shortcuts::syntax rust",
-	--		fields = {
-	--			Context = "rust",
+	--	contexts = {
+	--		nvim = {
+	--			tags = "shortcuts::mappings",
+	--			fields = {
+	--				Context = "mappings",
+	--			},
 	--		},
 	--	},
-	--},
 	move_cursor_after_creation = true,
 })
 

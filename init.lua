@@ -16,7 +16,7 @@ require("viet.plugins.treesitter")
 require("viet.plugins.gitsigns")
 require("viet.plugins.orgmode")
 require("viet.plugins.markdown-preview")
-require("viet.plugins.org-bullets")
+require("viet.plugins.org-bullets") --breaks shit
 --require("viet.plugins.headlines") not working correctly
 require("viet.plugins.nvim-colorizer")
 --require("viet.plugins.sniprun")
@@ -25,3 +25,8 @@ require("viet.plugins.neorg")
 require("viet.plugins.which-key")
 require("viet.plugins.nomodoro")
 require("viet.plugins.anki")
+--require("viet.plugins.hologram")
+-- this never works bruh
+require("hologram").setup({
+	auto_display = true,
+})

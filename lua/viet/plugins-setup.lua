@@ -200,6 +200,8 @@ return packer.startup(function(use)
 	use({ "nvim-lua/popup.nvim" })
 	use({ "nvim-telescope/telescope-media-files.nvim" })
 
+	use({ "tpope/vim-repeat" })
+
 	if packer_boostrap then
 		require("packer").sync()
 	end

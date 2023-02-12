@@ -25,8 +25,7 @@ require("viet.plugins.neorg")
 require("viet.plugins.which-key")
 require("viet.plugins.nomodoro")
 require("viet.plugins.anki")
---require("viet.plugins.hologram")
 -- this never works bruh
-require("hologram").setup({
-	auto_display = true,
-})
+-- require("hologram").setup({
+-- auto_display = true,
+-- })

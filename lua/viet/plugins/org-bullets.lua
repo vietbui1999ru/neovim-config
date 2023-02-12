@@ -8,7 +8,7 @@ bullets.setup({
 	concealcursor = false,
 	symbols = {
 		-- headlines can be a list
-		headlines = { "◉", "○", "✸", "✿" },
+		headlines = { "❖", "▶︎", "➤", "➢" },
 
 		--	headlines = function(default_list)
 		--		table.insert(default_list, "🤖")

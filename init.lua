@@ -29,3 +29,4 @@ require("viet.plugins.anki")
 -- require("hologram").setup({
 -- auto_display = true,
 -- })
+require("viet.plugins.vimtex")

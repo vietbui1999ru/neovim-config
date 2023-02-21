@@ -202,6 +202,8 @@ return packer.startup(function(use)
 
 	use({ "tpope/vim-repeat" })
 
+	use({ "lervag/vimtex" })
+
 	if packer_boostrap then
 		require("packer").sync()
 	end

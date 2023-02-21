@@ -20,4 +20,11 @@ bullets.setup({
 			todo = { "˟", "OrgTODO" },
 		},
 	},
+	config = {
+		set_config = {
+			markers = {
+				bullet = "⌭",
+			},
+		},
+	},
 })

@@ -1,3 +1,11 @@
+if vim.g.vscode then
+	-- VSCode extension
+	print("VSCode extension")
+else
+	-- Neovim
+	print("Neovim")
+end
+
 require("viet.plugins-setup")
 require("viet.core.options")
 require("viet.core.keymaps")
@@ -25,8 +33,10 @@ require("viet.plugins.neorg")
 require("viet.plugins.which-key")
 require("viet.plugins.nomodoro")
 require("viet.plugins.anki")
+require("luasnip")
 -- this never works bruh
 -- require("hologram").setup({
 -- auto_display = true,
 -- })
 require("viet.plugins.vimtex")
+require("viet.plugins.vim-fugitive")

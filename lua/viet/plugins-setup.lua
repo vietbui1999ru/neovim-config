@@ -204,6 +204,24 @@ return packer.startup(function(use)
 
 	use({ "lervag/vimtex" })
 
+	use({ "github/copilot.vim" })
+
+	use({
+		"pwntester/octo.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+			"kyazdani42/nvim-web-devicons",
+		},
+		config = function()
+			require("octo").setup()
+		end,
+	})
+
+	use({
+		"tpope/vim-fugitive",
+	})
+
 	if packer_boostrap then
 		require("packer").sync()
 	end

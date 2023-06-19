@@ -206,6 +206,9 @@ return packer.startup(function(use)
 
 	use({ "github/copilot.vim" })
 
+	-- vscode neovim
+	use({ "asvetliakov/vscode-neovim" })
+
 	use({
 		"pwntester/octo.nvim",
 		requires = {

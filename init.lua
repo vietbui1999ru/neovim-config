@@ -32,11 +32,11 @@ require("luasnip")
 -- })
 require("viet.plugins.vimtex")
 require("viet.plugins.vim-fugitive")
-require("viet.plugins.vscode-neovim")
-if vim.g.vscode then
-	-- VSCode extension
-	print("VSCode neovim extension success")
-else
-	-- Neovim
-	print("Neovim did not run")
-end
+--require("viet.plugins.vscode-neovim")
+--if vim.g.vscode then
+--	-- VSCode extension
+--	print("VSCode neovim extension success")
+--else
+--	-- Neovim
+--	print("Neovim did not run")
+--end

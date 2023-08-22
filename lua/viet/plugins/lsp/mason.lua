@@ -27,6 +27,7 @@ mason_lspconfig.setup({
 		"marksman", -- markdown
 		"rust_analyzer", -- rust
 		"emmet_ls",
+		"pyright", -- python
 	},
 	automatic_installation = true,
 })
@@ -34,9 +35,10 @@ mason_lspconfig.setup({
 mason_null_ls.setup({
 	ensure_installed = {
 
-		"prettier",
-		"stylua",
-		"eslint_d",
+		"prettier", -- js
+		"stylua", -- lua
+		"eslint_d", -- js
+		"black", -- python
 	},
 
 	automatic_installation = true,

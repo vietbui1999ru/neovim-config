@@ -28,6 +28,7 @@ treesitter.setup({
 		"regex",
 		"org",
 		"norg",
+		"cpp",
 	},
 	auto_install = true,
 })

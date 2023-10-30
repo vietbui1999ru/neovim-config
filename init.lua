@@ -40,3 +40,6 @@ require("viet.plugins.vim-fugitive")
 --	-- Neovim
 --	print("Neovim did not run")
 --end
+--
+require("viet.plugins.toggleterm")
+vim.cmd("set rtp+=/Users/vietquocbui/.opam/default/share/ocp-indent/vim")

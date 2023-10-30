@@ -97,35 +97,35 @@ return packer.startup(function(use)
 	})
 
 	-- orgmode. Works!
-	use({
-		"nvim-orgmode/orgmode",
-		config = function()
-			require("orgmode").setup_ts_grammar({})
-		end,
-	})
+	-- use({
+	-- 	"nvim-orgmode/orgmode",
+	-- 	config = function()
+	-- 		require("orgmode").setup_ts_grammar({})
+	-- 	end,
+	-- })
 
-	use({ "nvim-neorg/neorg-telescope" })
-	-- neorg, a better orgmode experience. So they say...
-	use({
-		"nvim-neorg/neorg",
-		--		config = function()
-		--			require("neorg").setup({
-		--				load = {
-		--					["core.defaults"] = {}, -- Loads default behaviour
-		--					["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
-		--					["core.norg.dirman"] = { -- Manages Neorg workspaces
-		--						config = {
-		--							workspaces = {
-		--								notes = "~/Desktop/Spring-2023/neorg-notes/",
-		--							},
-		--						},
-		--					},
-		--				},
-		--			})
-		--		end,
-		--		run = ":Neorg sync-parsers",
-		--		requires = "nvim-lua/plenary.nvim",
-	})
+	-- use({ "nvim-neorg/neorg-telescope" })
+	-- -- neorg, a better orgmode experience. So they say...
+	-- use({
+	-- 	"nvim-neorg/neorg",
+	--		config = function()
+	--			require("neorg").setup({
+	--				load = {
+	--					["core.defaults"] = {}, -- Loads default behaviour
+	--					["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
+	--					["core.norg.dirman"] = { -- Manages Neorg workspaces
+	--						config = {
+	--							workspaces = {
+	--								notes = "~/Desktop/Spring-2023/neorg-notes/",
+	--							},
+	--						},
+	--					},
+	--				},
+	--			})
+	--		end,
+	--		run = ":Neorg sync-parsers",
+	--		requires = "nvim-lua/plenary.nvim",
+	-- })
 
 	-- auto closing
 	use("windwp/nvim-autopairs")
@@ -151,9 +151,9 @@ return packer.startup(function(use)
 	})
 
 	-- orgmode bullets beautify
-	use({
-		"akinsho/org-bullets.nvim",
-	})
+	-- use({
+	-- 	"akinsho/org-bullets.nvim",
+	-- })
 
 	-- orgmode headlines highlighter, still not working
 	use({
@@ -171,7 +171,7 @@ return packer.startup(function(use)
 	use({ "dhruvasagar/vim-table-mode" })
 
 	-- easy hyperlink, journaling, and wiki features
-	use({ "ranjithshegde/orgWiki.nvim" })
+	-- use({ "ranjithshegde/orgWiki.nvim" })
 
 	-- zen-mode
 	use({ "folke/zen-mode.nvim" })
@@ -223,6 +223,13 @@ return packer.startup(function(use)
 
 	use({
 		"tpope/vim-fugitive",
+	})
+
+	-- toggle terminal
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+		config = function() end,
 	})
 
 	if packer_boostrap then

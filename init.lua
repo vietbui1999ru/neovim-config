@@ -42,4 +42,4 @@ require("viet.plugins.vim-fugitive")
 --end
 --
 require("viet.plugins.toggleterm")
-vim.cmd("set rtp+=/Users/vietquocbui/.opam/default/share/ocp-indent/vim")
+-- vim.cmd("set rtp+=/Users/vietquocbui/.opam/default/share/ocp-indent/vim")

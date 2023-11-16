@@ -231,6 +231,8 @@ return packer.startup(function(use)
 		tag = "*",
 		config = function() end,
 	})
+	use({ "whonore/Coqtail" })
+	use({ "rhysd/vim-wasm" })
 
 	if packer_boostrap then
 		require("packer").sync()

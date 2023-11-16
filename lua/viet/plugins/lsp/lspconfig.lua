@@ -57,7 +57,13 @@ typescript.setup({
 		on_attach = on_attach,
 	},
 })
-
+-- config rust
+lspconfig["rust_analyzer"].setup({
+	-- Server-specific settings. See `:help lspconfig-setup`
+	settings = {
+		["rust-analyzer"] = {},
+	},
+})
 -- config css
 lspconfig["cssls"].setup({
 	capabilities = capabilities,
@@ -76,9 +82,13 @@ lspconfig["emmet_ls"].setup({
 	on_attach = on_attach,
 	filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
 })
+--
+-- config python pyright
+lspconfig["pyright"].setup({})
 
 -- configure lua server (with special settings)
 -- originally sumneko_lua
+--
 lspconfig["lua_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,

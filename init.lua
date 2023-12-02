@@ -43,3 +43,6 @@ require("viet.plugins.vim-fugitive")
 --
 require("viet.plugins.toggleterm")
 -- vim.cmd("set rtp+=/Users/vietquocbui/.opam/default/share/ocp-indent/vim")
+
+-- require("viet.plugins.merlin")
+require("viet.plugins.pyenv_setup").setup()

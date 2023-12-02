@@ -19,6 +19,7 @@ treesitter.setup({
 		"html",
 		"css",
 		"markdown",
+		"markdown_inline",
 		"lua",
 		"vim",
 		"gitignore",
@@ -29,6 +30,7 @@ treesitter.setup({
 		"org",
 		"norg",
 		"cpp",
+		"ocaml",
 	},
 	auto_install = true,
 })

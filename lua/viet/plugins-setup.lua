@@ -134,21 +134,22 @@ return packer.startup(function(use)
 	-- git signs plugin
 	use("lewis6991/gitsigns.nvim")
 
-	--	use({
-	--		"iamcco/markdown-preview.nvim",
-	--		run = function()
-	--			vim.fn["mkdp#util#install"]()
-	--		end,
-	--	})
-
+	--  install without yarn or npm
 	use({
 		"iamcco/markdown-preview.nvim",
-		run = "cd app && npm install",
-		setup = function()
-			vim.g.mkdp_filetypes = { "markdown" }
+		run = function()
+			vim.fn["mkdp#util#install"]()
 		end,
-		ft = { "markdown" },
 	})
+
+	-- 	use({
+	-- 		"iamcco/markdown-preview.nvim",
+	-- 		run = "cd app && npm install",
+	-- 		setup = function()
+	-- 			vim.g.mkdp_filetypes = { "markdown" }
+	-- 		end,
+	-- 		ft = { "markdown" },
+	-- 	})
 
 	-- orgmode bullets beautify
 	-- use({
@@ -233,6 +234,7 @@ return packer.startup(function(use)
 	})
 	use({ "whonore/Coqtail" })
 	use({ "rhysd/vim-wasm" })
+	use({ "dense-analysis/ale" })
 
 	if packer_boostrap then
 		require("packer").sync()

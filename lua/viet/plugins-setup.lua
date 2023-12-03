@@ -205,7 +205,7 @@ return packer.startup(function(use)
 
 	use({ "lervag/vimtex" })
 
-	-- use({ "github/copilot.vim" })
+	use({ "github/copilot.vim" })
 
 	-- vscode neovim
 	use({ "asvetliakov/vscode-neovim" })
@@ -235,6 +235,9 @@ return packer.startup(function(use)
 	use({ "whonore/Coqtail" })
 	use({ "rhysd/vim-wasm" })
 	use({ "dense-analysis/ale" })
+
+	use({ "epwalsh/obsidian.nvim" })
+	use({ "mfussenegger/nvim-dap" })
 
 	if packer_boostrap then
 		require("packer").sync()

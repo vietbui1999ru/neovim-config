@@ -46,3 +46,4 @@ require("viet.plugins.toggleterm")
 
 -- require("viet.plugins.merlin")
 require("viet.plugins.pyenv_setup").setup()
+require("viet.plugins.obsidian")

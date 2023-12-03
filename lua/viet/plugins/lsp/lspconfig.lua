@@ -89,7 +89,7 @@ lspconfig["pyright"].setup({})
 -- configure lua server (with special settings)
 -- originally sumneko_lua
 --
-lspconfig["ocaml-lsp"].setup({})
+lspconfig["ocamllsp"].setup({})
 lspconfig["lua_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,

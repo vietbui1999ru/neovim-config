@@ -1,11 +1,11 @@
 -- Check if obsidian.nvim is installed
-local setup, obsidian = pcall(require, "obsidian.nvim")
+local setup, obsidian = pcall(require, "obsidian")
 if not setup then
 	return
 end
 
--- Load required plugins
-local plenary = require("plenary.nvim")
+-- Load required plugins plenary
+require("plenary.reload").reload_module("obsidian")
 
 -- Setup obsidian.nvim
 obsidian.setup({

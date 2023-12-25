@@ -1,10 +1,27 @@
-local status, toggle = pcall(require, "toggleterm")
+local status, term = pcall(require, "toggleterm")
 if not status then
 	return
 end
 
-toggle.setup({
-	size = 20,
+term.setup({
+	function()
+		if term.direction == "horizontal" then
+			return 15
+		elseif term.direction == "vertical" then
+			return 20
+		end
+	end,
 	open_mapping = [[<C-t>]],
-	direction = "float",
+	direction = "horizontal",
+	terminal_mappings = true,
+	hide_numbers = true,
+
+	float_opts = {
+		border = "curved",
+		winblend = 3,
+		highlights = {
+			border = "Normal",
+			background = "Normal",
+		},
+	},
 })

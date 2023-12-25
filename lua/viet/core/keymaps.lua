@@ -72,3 +72,32 @@ kmap.set("n", "<leader>ab", ":Anki Basic<Enter>")
 kmap.set("n", "<leader>au", ":AnkiUnlock<Enter>")
 kmap.set("n", "<leader>as", ":AnkiSend<Enter>")
 kmap.set("n", "<leader>ai", ":AnkiSendGui<Enter>")
+
+-- cycle suggestions
+kmap.set("i", "<C-j>", "<Plug>(copilot-next)", { silent = true })
+kmap.set("i", "<C-k>", "<Plug>(copilot-prev)", { silent = true })
+kmap.set("n", "<leader>cp", ":Copilot panel<CR>")
+
+-- keymaps for undo tree
+--
+kmap.set("n", "<leader>ut", ":UndotreeToggle<CR>")
+-- keymaps for copilot enable
+-- Define a variable to store the toggle state
+-- In your keymaps.lua file
+-- local my_toggle_state = false
+--
+-- local function toggle_copilot()
+-- 	my_toggle_state = not my_toggle_state
+--
+-- 	if my_toggle_state then
+-- 		vim.cmd(":Copilot enable")
+-- 		-- Add your action A logic here
+-- 	else
+-- 		vim.cmd(":Copilot disable")
+-- 		-- Add your action B logic here
+-- 	end
+-- end
+-- kmap.set("n", "<leader>cet", ":lua toggle_copilot()<CR>", { noremap = true, silent = true })
+-- return {
+-- 	toggle_copilot = toggle_copilot,
+-- }

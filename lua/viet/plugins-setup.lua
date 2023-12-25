@@ -239,6 +239,8 @@ return packer.startup(function(use)
 	use({ "epwalsh/obsidian.nvim" })
 	use({ "mfussenegger/nvim-dap" })
 
+	use({ "mbbill/undotree" })
+
 	if packer_boostrap then
 		require("packer").sync()
 	end

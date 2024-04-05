@@ -89,6 +89,7 @@ lspconfig["pyright"].setup({})
 -- configure lua server (with special settings)
 -- originally sumneko_lua
 --
+-- lspconfig["coq_lsp"].setup({})
 lspconfig["ocamllsp"].setup({})
 lspconfig["lua_ls"].setup({
 	capabilities = capabilities,

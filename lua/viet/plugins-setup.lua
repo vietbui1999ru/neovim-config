@@ -31,7 +31,8 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-	use("bluz71/vim-nightfly-colors") -- colorscheme
+	-- use("bluz71/vim-nightfly-colors") -- colorscheme
+	use("bluz71/vim-moonfly-colors") -- colorscheme
 	use("christoomey/vim-tmux-navigator") -- tmux & split win navigation
 
 	use("szw/vim-maximizer") -- max and restore current win
@@ -96,37 +97,6 @@ return packer.startup(function(use)
 		end,
 	})
 
-	-- orgmode. Works!
-	-- use({
-	-- 	"nvim-orgmode/orgmode",
-	-- 	config = function()
-	-- 		require("orgmode").setup_ts_grammar({})
-	-- 	end,
-	-- })
-
-	-- use({ "nvim-neorg/neorg-telescope" })
-	-- -- neorg, a better orgmode experience. So they say...
-	-- use({
-	-- 	"nvim-neorg/neorg",
-	--		config = function()
-	--			require("neorg").setup({
-	--				load = {
-	--					["core.defaults"] = {}, -- Loads default behaviour
-	--					["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
-	--					["core.norg.dirman"] = { -- Manages Neorg workspaces
-	--						config = {
-	--							workspaces = {
-	--								notes = "~/Desktop/Spring-2023/neorg-notes/",
-	--							},
-	--						},
-	--					},
-	--				},
-	--			})
-	--		end,
-	--		run = ":Neorg sync-parsers",
-	--		requires = "nvim-lua/plenary.nvim",
-	-- })
-
 	-- auto closing
 	use("windwp/nvim-autopairs")
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" })
@@ -157,16 +127,16 @@ return packer.startup(function(use)
 	-- })
 
 	-- orgmode headlines highlighter, still not working
-	use({
-		"lukas-reineke/headlines.nvim",
-	})
+	--	use({
+	--		"lukas-reineke/headlines.nvim",
+	--	}) not using orgmode anymore
 
 	use({
 		"norcalli/nvim-colorizer.lua",
 	})
 
 	-- run code right when you finish your command
-	use({ "michaelb/sniprun", run = "bash ./install.sh" })
+	-- use({ "michaelb/sniprun", run = "zsh ./install.sh" })
 
 	-- make creating tables in nvim fasterj
 	use({ "dhruvasagar/vim-table-mode" })
@@ -175,7 +145,7 @@ return packer.startup(function(use)
 	-- use({ "ranjithshegde/orgWiki.nvim" })
 
 	-- zen-mode
-	use({ "folke/zen-mode.nvim" })
+	-- use({ "folke/zen-mode.nvim" }) -- never used it
 
 	-- primeagen's vim game
 	use({ "ThePrimeagen/vim-be-good" })
@@ -196,7 +166,7 @@ return packer.startup(function(use)
 	use({ "jbyuki/venn.nvim" })
 
 	-- image viewer straight in terminal and nvim
-	use({ "edluffy/hologram.nvim" })
+	use({ "edluffy/hologram.nvim" }) --only works with alacritty/kitty
 
 	use({ "nvim-lua/popup.nvim" })
 	use({ "nvim-telescope/telescope-media-files.nvim" })
@@ -217,9 +187,6 @@ return packer.startup(function(use)
 			"nvim-telescope/telescope.nvim",
 			"kyazdani42/nvim-web-devicons",
 		},
-		config = function()
-			require("octo").setup()
-		end,
 	})
 
 	use({
@@ -232,14 +199,43 @@ return packer.startup(function(use)
 		tag = "*",
 		config = function() end,
 	})
-	use({ "whonore/Coqtail" })
+
+	use({
+		"whonore/Coqtail",
+	})
+	--	use({
+	--		"tomtomjhj/coq-lsp.nvim",
+	--		after = "nvim-lspconfig",
+	--		config = function()
+	--			require("coq-lsp").setup()
+	--		end,
+	--	})
+
 	use({ "rhysd/vim-wasm" })
 	use({ "dense-analysis/ale" })
 
-	use({ "epwalsh/obsidian.nvim" })
+	use({ "epwalsh/obsidian.nvim", tag = "*", require = "nvim-lua/plenary.nvim" })
 	use({ "mfussenegger/nvim-dap" })
 
+	-- markdown preview in neovim
+	-- use({ "npxbr/glow.nvim" })
+
 	use({ "mbbill/undotree" })
+	use({ "tamton-aquib/zone.nvim" })
+	use({
+		"giusgad/pets.nvim",
+		requires = {
+			"edluffy/hologram.nvim",
+			"MunifTanjim/nui.nvim",
+		},
+	})
+	use({
+		"VonHeikemen/fine-cmdline.nvim",
+		requires = {
+			{ "MunifTanjim/nui.nvim" },
+		},
+	})
+	use({ "ThePrimeagen/harpoon", branch = "harpoon2", requires = { "nvim-lua/plenary.nvim" } })
 
 	if packer_boostrap then
 		require("packer").sync()

@@ -7,7 +7,7 @@ end
 treesitter.setup({
 	hightlight = {
 		enable = true,
-		additional_vim_regex_highlighting = { "org", "norg" },
+		-- additional_vim_regex_highlighting = { "org", "norg" }, --
 	},
 	indent = { enable = true },
 	autotag = { enable = true },
@@ -27,8 +27,6 @@ treesitter.setup({
 		"rust",
 		"python",
 		"regex",
-		"org",
-		"norg",
 		"cpp",
 		"ocaml",
 	},

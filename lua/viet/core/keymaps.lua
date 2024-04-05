@@ -6,6 +6,7 @@ local opts = { noremap = true, silent = true }
 
 -- exit from insert mode and save current file
 kmap.set("i", "jk", "<ESC>:w<Enter>", opts)
+kmap.set("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })
 
 kmap.set("n", "<leader>nh", ":nohl<CR>")
 
@@ -40,14 +41,14 @@ kmap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- show active buffers
 kmap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- show help tags
 
 -- markdown
-kmap.set("n", "<C-s>", ":MarkdownPreview<CR>")
-kmap.set("n", "<M-s>", ":MarkdownPreviewStop<CR>")
-kmap.set("n", "<C-p>", ":MarkdownPreviewToggle<CR>")
+kmap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
+kmap.set("n", "<leader>ms", ":MarkdownPreviewStop<CR>")
+kmap.set("n", "<leader>mt", ":MarkdownPreviewToggle<CR>")
 
 -- sniprun
---kmap.set("v", "p", "<Plug>SnipRun", { silent = true }) -- do not run
---kmap.set("n", "<leader>sp", "<Plug>SnipRunOperator", { silent = true }) -- do not run
---kmap.set("n", "<leader>sr", "<Plug>SnipRun", { silent = true }) -- do not run
+kmap.set("v", "p", "<Plug>SnipRun", { silent = true }) -- do not run
+kmap.set("n", "<leader>sp", "<Plug>SnipRunOperator", { silent = true }) -- do not run
+kmap.set("n", "<leader>sr", "<Plug>SnipRun", { silent = true }) -- do not run
 
 -- Colorizer toggle
 kmap.set("n", "<leader>ct", ":ColorizerToggle<CR>")
@@ -56,7 +57,7 @@ kmap.set("n", "<leader>ct", ":ColorizerToggle<CR>")
 kmap.set("n", "<leader>tm", ":TableModeToggle<CR>") -- toggle table mode
 
 -- zen-mode toggle
-kmap.set("n", "<leader>zm", ":ZenMode<CR>")
+-- kmap.set("n", "<leader>zm", ":ZenMode<CR>")
 
 -- lsync web turn on
 -- kmap.set("n", "<leader>wb", )
@@ -68,36 +69,22 @@ pomo("n", "<leader>nb", "<cmd>NomoBreak<cr>", opts)
 pomo("n", "<leader>ns", "<cmd>NomoStop<cr>", opts)
 
 -- Anki fast
-kmap.set("n", "<leader>ab", ":Anki Basic<Enter>")
-kmap.set("n", "<leader>au", ":AnkiUnlock<Enter>")
-kmap.set("n", "<leader>as", ":AnkiSend<Enter>")
-kmap.set("n", "<leader>ai", ":AnkiSendGui<Enter>")
+kmap.set("n", "<leader>Ab", ":Anki Basic<Enter>")
+kmap.set("n", "<leader>Au", ":AnkiUnlock<Enter>")
+kmap.set("n", "<leader>As", ":AnkiSend<Enter>")
+kmap.set("n", "<leader>Ai", ":AnkiSendGui<Enter>")
 
 -- cycle suggestions
+kmap.set("n", "<leader>cpd", ":Copilot disable<CR>")
+kmap.set("n", "<leader>cpp", ":Copilot panel<CR>")
 kmap.set("i", "<C-j>", "<Plug>(copilot-next)", { silent = true })
 kmap.set("i", "<C-k>", "<Plug>(copilot-prev)", { silent = true })
-kmap.set("n", "<leader>cp", ":Copilot panel<CR>")
 
 -- keymaps for undo tree
 --
 kmap.set("n", "<leader>ut", ":UndotreeToggle<CR>")
--- keymaps for copilot enable
--- Define a variable to store the toggle state
--- In your keymaps.lua file
--- local my_toggle_state = false
---
--- local function toggle_copilot()
--- 	my_toggle_state = not my_toggle_state
---
--- 	if my_toggle_state then
--- 		vim.cmd(":Copilot enable")
--- 		-- Add your action A logic here
--- 	else
--- 		vim.cmd(":Copilot disable")
--- 		-- Add your action B logic here
--- 	end
--- end
--- kmap.set("n", "<leader>cet", ":lua toggle_copilot()<CR>", { noremap = true, silent = true })
--- return {
--- 	toggle_copilot = toggle_copilot,
--- }
+
+-- keymaps for coq-lsp
+kmap.set("n", "<leader>ls", ":LspStart<CR>")
+
+-- keymaps for harpoon

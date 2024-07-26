@@ -44,5 +44,5 @@ require("viet.plugins.pyenv_setup").setup()
 require("viet.plugins.obsidian")
 --require("viet.plugins.copilot")
 
-require("viet.plugins.zone")
+--require("viet.plugins.zone")
 require("viet.plugins.pets")

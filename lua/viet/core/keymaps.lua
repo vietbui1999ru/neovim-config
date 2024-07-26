@@ -75,10 +75,10 @@ kmap.set("n", "<leader>As", ":AnkiSend<Enter>")
 kmap.set("n", "<leader>Ai", ":AnkiSendGui<Enter>")
 
 -- cycle suggestions
-kmap.set("n", "<leader>cpd", ":Copilot disable<CR>")
-kmap.set("n", "<leader>cpp", ":Copilot panel<CR>")
-kmap.set("i", "<C-j>", "<Plug>(copilot-next)", { silent = true })
-kmap.set("i", "<C-k>", "<Plug>(copilot-prev)", { silent = true })
+--kmap.set("n", "<leader>cpd", ":Copilot disable<CR>")
+--kmap.set("n", "<leader>cpp", ":Copilot panel<CR>")
+--kmap.set("i", "<C-j>", "<Plug>(copilot-next)", { silent = true })
+--kmap.set("i", "<C-k>", "<Plug>(copilot-prev)", { silent = true })
 
 -- keymaps for undo tree
 --

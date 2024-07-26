@@ -175,7 +175,7 @@ return packer.startup(function(use)
 
 	use({ "lervag/vimtex" })
 
-	use({ "github/copilot.vim" })
+	-- use({ "github/copilot.vim" })
 
 	-- vscode neovim
 	use({ "asvetliakov/vscode-neovim" })

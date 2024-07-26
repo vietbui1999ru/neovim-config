@@ -5,4 +5,4 @@ if not copilot_setup then
 end
 
 -- open nvim with copilot off
-vim.cmd(":Copilot disable")
+-- vim.cmd(":Copilot disable")

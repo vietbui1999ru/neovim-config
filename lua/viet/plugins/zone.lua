@@ -6,9 +6,8 @@ end
 
 zone.setup({
 	style = "dvd",
-	after = 1200,
+	after = 5,
 	dvd = {
-		text = { "DVD", "What you lookin' at?", "Get back to Work >:(" },
 		tick_time = 100,
 	},
 })

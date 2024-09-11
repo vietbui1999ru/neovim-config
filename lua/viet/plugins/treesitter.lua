@@ -25,7 +25,6 @@ treesitter.setup({
 		"gitignore",
 		"dockerfile",
 		"rust",
-		"python",
 		"regex",
 		"cpp",
 		"ocaml",

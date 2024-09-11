@@ -24,7 +24,7 @@ require("viet.plugins.octo")
 require("luasnip")
 require("viet.plugins.coqtail")
 -- this never works because im using iterm2
-require("hologram")
+-- require("hologram")
 require("viet.plugins.vimtex")
 
 require("viet.plugins.vim-fugitive")
@@ -40,7 +40,7 @@ require("viet.plugins.vim-fugitive")
 require("viet.plugins.toggleterm")
 -- vim.cmd("set rtp+=/Users/vietquocbui/.opam/default/share/ocp-indent/vim")
 
-require("viet.plugins.pyenv_setup").setup()
+--require("viet.plugins.pyenv_setup").setup()
 require("viet.plugins.obsidian")
 --require("viet.plugins.copilot")
 

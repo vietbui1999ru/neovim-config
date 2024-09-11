@@ -1,4 +1,5 @@
 local lspconfig_status, lspconfig = pcall(require, "lspconfig")
+-- local python = require("python")
 if not lspconfig_status then
 	return
 end
@@ -8,10 +9,10 @@ if not cmp_nvim_lsp_status then
 	return
 end
 
-local typescript_setup, typescript = pcall(require, "typescript")
-if not typescript_setup then
-	return
-end
+-- local typescript_setup, typescript = pcall(require, "typescript")
+-- if not typescript_setup then
+-- 	return
+-- end
 
 local keymap = vim.keymap
 
@@ -35,28 +36,28 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
 
 	-- typescript specific keymaps (e.g. rename file and update imports)
-	if client.name == "tsserver" then
-		keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>") -- rename file and update imports
-		keymap.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>") -- organize imports (not in youtube nvim video)
-		keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>") -- remove unused variables (not in youtube nvim video)
-	end
+	--	if client.name == "ts_ls" then
+	--		keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>") -- rename file and update imports
+	--		keymap.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>") -- organize imports (not in youtube nvim video)
+	--		keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>") -- remove unused variables (not in youtube nvim video)
+	--	end
 end
 
 -- used to enable autocomplete
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
+capabilities.textDocument.codeAction = true
 lspconfig["html"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
 -- config typescript
-typescript.setup({
-	server = {
-		capabilities = capabilities,
-		on_attach = on_attach,
-	},
-})
+-- typescript.setup({
+-- 	server = {
+-- 		capabilities = capabilities,
+-- 		on_attach = on_attach,
+-- 	},
+-- })
 -- config rust
 lspconfig["rust_analyzer"].setup({
 	-- Server-specific settings. See `:help lspconfig-setup`
@@ -84,13 +85,28 @@ lspconfig["emmet_ls"].setup({
 })
 --
 -- config python pyright
-lspconfig["pyright"].setup({})
+lspconfig["pyright"].setup({
+	cmd = { "/Users/vietquocbui/.local/share/nvim/mason/bin/pyright-langserver", "--stdio" },
+	capabilities = capabilities,
+	on_attach = on_attach,
+	filetypes = { "python" },
+	pythonPath = function()
+		-- Use the Python interpreter from the current Conda environment
+		local venv_path = "/opt/homebrew/Caskroom/miniconda/base/bin/python3"
+		return venv_path
+	end,
+})
+
+lspconfig["gopls"].setup({})
+
+-- config markdown
+-- lspconfig["markdownlint-cli2"].setup({})
 
 -- configure lua server (with special settings)
 -- originally sumneko_lua
 --
 -- lspconfig["coq_lsp"].setup({})
-lspconfig["ocamllsp"].setup({})
+--lspconfig["ocamllsp"].setup({})
 lspconfig["lua_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
@@ -100,13 +116,13 @@ lspconfig["lua_ls"].setup({
 			diagnostics = {
 				globals = { "vim" },
 			},
-			workspace = {
-				-- make language server aware of runtime files
-				library = {
-					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
-					[vim.fn.stdpath("config") .. "/lua"] = true,
-				},
-			},
+			--	workspace = {
+			--		-- make language server aware of runtime files
+			--		library = {
+			--			[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+			--			[vim.fn.stdpath("config") .. "/lua"] = true,
+			--		},
+			--	},
 		},
 	},
 })

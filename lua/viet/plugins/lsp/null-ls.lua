@@ -18,6 +18,8 @@ null_ls.setup({
 		--  to disable file types use
 		--  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
 		formatting.prettier, -- js/ts formatter
+		formatting.markdownlint,
+		formatting.black,
 		formatting.stylua, -- lua formatter
 		diagnostics.eslint_d.with({ -- js/ts linter
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
@@ -45,4 +47,12 @@ null_ls.setup({
 			})
 		end
 	end,
+
+	--	callback = function()
+	--		vim.lsp.buf.format({
+	--			filter = function(client)
+	--				return client.name == "null-ls" or client.supports_method("textDocument/codeAction")
+	--			end,
+	--			bufnr = bufnr,
+	--		})
 })

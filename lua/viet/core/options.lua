@@ -1,6 +1,8 @@
 local opt = vim.opt --for concisesness
 
-vim.g.python_host_prog = "/opt/homebrew/bin/python3"
+-- vim.g.python_host_prog = "/opt/homebrew/bin/python3"
+vim.g.python_host_prog = "/opt/homebrew/Caskroom/miniconda/base/bin/python3"
+vim.g.python3_host_prog = "/opt/homebrew/Caskroom/miniconda/base/bin/python3"
 vim.cmd("filetype plugin indent on")
 vim.cmd("syntax enable")
 

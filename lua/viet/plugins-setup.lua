@@ -80,7 +80,7 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig")
 	use("hrsh7th/cmp-nvim-lsp")
 	use({ "glepnir/lspsaga.nvim", branch = "main" })
-	use("jose-elias-alvarez/typescript.nvim")
+	-- use("jose-elias-alvarez/typescript.nvim")
 	use("onsails/lspkind.nvim")
 
 	-- formatting & linting
@@ -222,20 +222,28 @@ return packer.startup(function(use)
 
 	use({ "mbbill/undotree" })
 	use({ "tamton-aquib/zone.nvim" })
-	use({
-		"giusgad/pets.nvim",
-		requires = {
-			"edluffy/hologram.nvim",
-			"MunifTanjim/nui.nvim",
-		},
-	})
+	-- use({
+	--		"giusgad/pets.nvim",
+	--		requires = {
+	--			"edluffy/hologram.nvim",
+	--			"MunifTanjim/nui.nvim",
+	--		},
+	--	})
 	use({
 		"VonHeikemen/fine-cmdline.nvim",
 		requires = {
 			{ "MunifTanjim/nui.nvim" },
 		},
 	})
+	use({
+		"kdheepak/lazygit.nvim",
+		-- optional for floating window border decoration
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	})
 	use({ "ThePrimeagen/harpoon", branch = "harpoon2", requires = { "nvim-lua/plenary.nvim" } })
+	use({ "mechatroner/rainbow_csv" })
 
 	if packer_boostrap then
 		require("packer").sync()

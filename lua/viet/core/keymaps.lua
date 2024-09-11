@@ -86,5 +86,6 @@ kmap.set("n", "<leader>ut", ":UndotreeToggle<CR>")
 
 -- keymaps for coq-lsp
 kmap.set("n", "<leader>ls", ":LspStart<CR>")
+kmap.set("n", "<leader>gg", ":LazyGit<CR>")
 
 -- keymaps for harpoon

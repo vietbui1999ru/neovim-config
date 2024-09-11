@@ -17,7 +17,7 @@ mason.setup()
 
 mason_lspconfig.setup({
 	ensure_installed = {
-		"tsserver", -- js
+		"ts_ls", -- js
 		"html",
 		"cssls", -- css
 		"tailwindcss",
@@ -28,6 +28,7 @@ mason_lspconfig.setup({
 		"rust_analyzer", -- rust
 		"emmet_ls",
 		"pyright", -- python
+		"gopls",
 	},
 	automatic_installation = true,
 })
@@ -35,10 +36,12 @@ mason_lspconfig.setup({
 mason_null_ls.setup({
 	ensure_installed = {
 
+		"markdownlint-cli2",
 		"prettier", -- js
 		"stylua", -- lua
 		"eslint_d", -- js
 		"black", -- python
+		"golangci-lint",
 	},
 
 	automatic_installation = true,

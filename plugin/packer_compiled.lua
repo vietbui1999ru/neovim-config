@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/vietquocbui/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?.lua;/Users/vietquocbui/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?/init.lua;/Users/vietquocbui/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?.lua;/Users/vietquocbui/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/vietquocbui/.cache/nvim/packer_hererocks/2.1.1716656478/lib/lua/5.1/?.so"
+local package_path_str = "/Users/vietquocbui/.cache/nvim/packer_hererocks/2.1.1724232689/share/lua/5.1/?.lua;/Users/vietquocbui/.cache/nvim/packer_hererocks/2.1.1724232689/share/lua/5.1/?/init.lua;/Users/vietquocbui/.cache/nvim/packer_hererocks/2.1.1724232689/lib/luarocks/rocks-5.1/?.lua;/Users/vietquocbui/.cache/nvim/packer_hererocks/2.1.1724232689/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/vietquocbui/.cache/nvim/packer_hererocks/2.1.1724232689/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -148,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/hologram.nvim",
     url = "https://github.com/edluffy/hologram.nvim"
+  },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -261,11 +266,6 @@ _G.packer_plugins = {
     path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["pets.nvim"] = {
-    loaded = true,
-    path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/pets.nvim",
-    url = "https://github.com/giusgad/pets.nvim"
-  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -275,6 +275,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  rainbow_csv = {
+    loaded = true,
+    path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/rainbow_csv",
+    url = "https://github.com/mechatroner/rainbow_csv"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
@@ -296,11 +301,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
-  },
-  ["typescript.nvim"] = {
-    loaded = true,
-    path = "/Users/vietquocbui/.local/share/nvim/site/pack/packer/start/typescript.nvim",
-    url = "https://github.com/jose-elias-alvarez/typescript.nvim"
   },
   undotree = {
     loaded = true,

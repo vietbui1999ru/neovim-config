@@ -31,7 +31,9 @@ kmap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
 kmap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle maximize or original size of window
 
 -- nvim-tree toggle by pressing space + e
-kmap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+-- kmap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+--
+kmap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Open parent dir" })
 
 -- telescope
 kmap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
@@ -83,9 +85,12 @@ kmap.set("n", "<leader>Ai", ":AnkiSendGui<Enter>")
 -- keymaps for undo tree
 --
 kmap.set("n", "<leader>ut", ":UndotreeToggle<CR>")
+kmap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>")
 
 -- keymaps for coq-lsp
 kmap.set("n", "<leader>ls", ":LspStart<CR>")
 kmap.set("n", "<leader>gg", ":LazyGit<CR>")
 
 -- keymaps for harpoon
+-- keymaps for toggleterm
+vim.api.nvim_set_keymap("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })

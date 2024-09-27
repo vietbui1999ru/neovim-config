@@ -11,14 +11,16 @@ term.setup({
 			return 20
 		end
 	end,
+	persistant_mode = true,
+	start_in_insert = false,
 	open_mapping = [[<C-t>]],
 	direction = "horizontal",
 	terminal_mappings = true,
+	autochdir = false,
 	hide_numbers = true,
-
 	float_opts = {
 		border = "curved",
-		winblend = 3,
+		winblend = 10,
 		highlights = {
 			border = "Normal",
 			background = "Normal",

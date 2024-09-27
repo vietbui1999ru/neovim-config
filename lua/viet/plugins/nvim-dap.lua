@@ -6,16 +6,16 @@ end
 
 dap.adapters.python = {
 	type = "executable",
-	command = "python",
+	command = os.getenv("HOME") .. "/opt/homebrew/Caskroom/miniconda/base/bin/python",
 	args = { "-m", "debugpy.adapter" },
 }
 
-dap.configurations.python = {
-	{
-		type = "python",
-		request = "launch",
-		name = "Launch file",
-		program = "${file}",
-		pythonPath = function() end,
-	},
-}
+--dap.configurations.python = {
+--	{
+--		type = "python",
+--		request = "launch",
+--		name = "Launch file",
+--		program = "${file}",
+--		pythonPath = function() end,
+--	},
+--}

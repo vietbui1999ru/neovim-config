@@ -3,32 +3,31 @@ if not status then
 	return
 end
 
-local lualine_nightfly = require("lualine.themes.moonfly")
-local new_colors = {
-	blue = "#6CA2EA",
-	green = "#B5D33D",
-	violet = "#845286",
-	yellow = "#FED23F",
-	red = "#EB5D9B",
-	black = "#000000",
-	white = "#ffffff",
-}
-lualine_nightfly.normal.a.bg = new_colors.white
-lualine_nightfly.insert.a.bg = new_colors.green
-lualine_nightfly.visual.a.bg = new_colors.violet
-
-lualine_nightfly.command = {
-	a = {
-		gui = "bold",
-		bg = new_colors.red,
-		fg = new_colors.black,
-	},
-}
+--local lualine_onedark = require("lualine.themes.catpuccin")
+--local new_colors = {
+--	blue = "#7CA6EA",
+--	green = "#B0D28D",
+--	violet = "#805281",
+--	yellow = "#FED23F",
+--	red = "#EB5D9B",
+--	black = "#000000",
+--	white = "#ffffff",
+--}
+--lualine_onedark.normal.a.bg = new_colors.white
+--lualine_onedark.insert.a.bg = new_colors.green
+--lualine_onedark.visual.a.bg = new_colors.violet
+--lualine_onedark.command = {
+--	a = {
+--		gui = "bold",
+--		bg = new_colors.red,
+--		fg = new_colors.black,
+--	},
+--}
 
 lualine.setup({
 
 	options = {
-		theme = lualine_nightfly,
+		theme = "catppuccin",
 	},
 	sections = {
 		lualine_x = {

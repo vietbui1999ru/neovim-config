@@ -29,6 +29,7 @@ mason_lspconfig.setup({
 		"emmet_ls",
 		"pyright", -- python
 		"gopls",
+		"bashls",
 	},
 	automatic_installation = true,
 })
@@ -42,6 +43,8 @@ mason_null_ls.setup({
 		"eslint_d", -- js
 		"black", -- python
 		"golangci-lint",
+		"shellcheck",
+		"selene",
 	},
 
 	automatic_installation = true,

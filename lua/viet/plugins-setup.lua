@@ -30,9 +30,18 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- packer plugin manager
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
+	use({
+		"stevearc/oil.nvim",
+		config = function()
+			require("oil").setup()
+		end,
+	})
 
 	-- use("bluz71/vim-nightfly-colors") -- colorscheme
-	use("bluz71/vim-moonfly-colors") -- colorscheme
+	-- use("bluz71/vim-moonfly-colors") -- colorscheme
+	-- Using Packer
+	-- use("navarasu/onedark.nvim")
+	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("christoomey/vim-tmux-navigator") -- tmux & split win navigation
 
 	use("szw/vim-maximizer") -- max and restore current win
@@ -45,11 +54,11 @@ return packer.startup(function(use)
 
 	-- file explorer
 	use({
-		"nvim-tree/nvim-tree.lua",
-		run = function()
-			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-			ts_update()
-		end,
+		-- 		"nvim-tree/nvim-tree.lua",
+		-- 		run = function()
+		-- 			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+		-- 			ts_update()
+		-- 		end,
 	})
 
 	-- icons
@@ -216,19 +225,20 @@ return packer.startup(function(use)
 
 	use({ "epwalsh/obsidian.nvim", tag = "*", require = "nvim-lua/plenary.nvim" })
 	use({ "mfussenegger/nvim-dap" })
+	use({ "jay-babu/mason-nvim-dap.nvim" })
 
 	-- markdown preview in neovim
 	-- use({ "npxbr/glow.nvim" })
 
 	use({ "mbbill/undotree" })
 	use({ "tamton-aquib/zone.nvim" })
-	-- use({
-	--		"giusgad/pets.nvim",
-	--		requires = {
-	--			"edluffy/hologram.nvim",
-	--			"MunifTanjim/nui.nvim",
-	--		},
-	--	})
+	use({
+		"giusgad/pets.nvim",
+		requires = {
+			"edluffy/hologram.nvim",
+			"MunifTanjim/nui.nvim",
+		},
+	})
 	use({
 		"VonHeikemen/fine-cmdline.nvim",
 		requires = {

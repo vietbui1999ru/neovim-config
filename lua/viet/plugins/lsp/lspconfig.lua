@@ -98,6 +98,7 @@ lspconfig["pyright"].setup({
 })
 
 lspconfig["gopls"].setup({})
+lspconfig["bashls"].setup({})
 
 -- config markdown
 -- lspconfig["markdownlint-cli2"].setup({})

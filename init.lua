@@ -30,6 +30,7 @@ require("viet.plugins.coqtail")
 require("viet.plugins.vimtex")
 
 require("viet.plugins.vim-fugitive")
+require("viet.plugins.harpoon")
 --require("viet.plugins.vscode-neovim")
 --if vim.g.vscode then
 --	-- VSCode extension

@@ -14,7 +14,7 @@ harpoon.setup({
 })
 local kmap = vim.keymap
 kmap.set("n", "<leader>a", function()
-	harpoon:list():append()
+	harpoon:list():add()
 end)
 kmap.set("n", "<C-e>", function()
 	harpoon.ui:toggle_quick_menu(harpoon:list())
